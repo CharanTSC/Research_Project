@@ -1,11 +1,4 @@
 {
-  "provider": {
-    "google": {
-      "project": "your-gcp-project-id",
-      "region": "us-central1",
-      "zone": "us-central1-a"
-    }
-  },
   "resource": {
     "google_compute_instance": {
       "compute_with_storage": {
@@ -18,6 +11,9 @@
             "size": 40,
             "type": "pd-ssd"
           }
+        },
+        "labels": {
+          "Name": "web-server"
         },
         "network_interface": [
           {
